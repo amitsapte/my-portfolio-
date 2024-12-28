@@ -2,7 +2,7 @@
   "name": "myportfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://your-username.github.io/your-repo-name",
+  "homepage":  "https://amitsapte.github.io/my-portfolio-/",
 
   "dependencies": {
     "cra-template": "1.2.0",
