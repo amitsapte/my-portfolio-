@@ -2,11 +2,11 @@ import amitImage from '../src/logo192.png'
 
 function App() {
   return (
-    <div>
+    <div className='  flex flex-col  '>
       <div className="">
 
       </div>
-      <div className="bg-gray-700  h-screen w-full  flex flex-col gap-3">
+      <div className="bg-gray-700  h-full   flex flex-col gap-3">
 
         <div className="flex relative left-1/3 top-2 flex-row start-1 justify-center items-center  gap-3 m-2">
           <svg
@@ -48,15 +48,31 @@ function App() {
 
         <div className="flex absolute left-11 top-[425px] ">
           <div className="border border-gray-900 bg-gray-900 h-[200px] w-[200px] flex flex-col   top-20 left-0">
-            <div className="w-[200px] h-[200px]">hey amit is here</div>
-            <div className="w-[200px] h-[200px]">hey amit is here</div>
+            
           </div>
-          <div className="ml-52 shadow-2xl shadow-slate-200">
-            <div className="w-[80px] h-[30px] bg-black "></div>
-          </div>
+         
 
         </div>
       </div>
+      <div className="mt-4 relative w-[500px] h-[400px] justify-center items-center shadow-2xl flex flex-col border border-gray-50 shadow-slate-200 bg-slate-500">
+            <div className="text-[30px] font-bold ">
+              BackEnd
+            </div>
+            <div className='flex flex-row gap-4  '>
+               <div className='border  border-gray-300 flex row w-[130px] h-[40px]'> 
+                <img src='' alt='not found'></img>
+                <label className='text-[20px] ml-1' >Java</label>
+              </div>
+              <div className='border border-gray-300 flex row w-[130px] h-[40px]'> 
+                <img src='' alt='not found'></img>
+                <label className='text-[20px] ml-1' >Node</label>
+              </div>
+              <div className='border border-gray-300 flex row w-[130px] h-[40px]'> 
+                <img src='' alt='not found'></img>
+                <label className='text-[20px] ml-1' >Java</label>
+              </div>                 
+            </div>
+          </div>
     </div>
   );
 }
