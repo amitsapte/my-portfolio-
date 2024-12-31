@@ -5,24 +5,30 @@ import './App.css'
 
 function App() {
   return (
-    <div className='bg-gray-700'>
-      <div className="flex  pt-2 mr-4 text-white gap-8 flex-row-reverse">
-        <div className="flex flex-row justify-center items-center " >
-          <img src={github} alt='not found' className=' m-2  w-[35px] h-[30px]  object-cover '></img>
-          <a className='text-[25px]' href='https://github.com/amitsapte'>Github </a>
-        </div>
-        <div className="flex  flex-row  justify-center items-center" >
-          <img src={hackrank} alt='not found' className='w-[30px] h-[20px] m-2  object-cover' ></img>
-          <a href='https://www.hackerrank.com/profile/sapteab2018'>Hackerrank</a>
-        </div>
+    <div>
+      <div className='bg-gray-700'>
+        <div className="flex  pt-2 mr-4 text-white gap-8 flex-row-reverse">
+          <div className="flex flex-row justify-center items-center " >
+            <img src={github} alt='not found' className=' m-2  w-[35px] h-[30px]  object-cover '></img>
+            <a className='text-[25px]' href='https://github.com/amitsapte'>Github </a>
+          </div>
+          <div className="flex  flex-row  justify-center items-center" >
+            <img src={hackrank} alt='not found' className='w-[30px] h-[20px] m-2  object-cover' ></img>
+            <a href='https://www.hackerrank.com/profile/sapteab2018'>Hackerrank</a>
+          </div>
 
-        <div className="flex flex-row  justify-center items-center " >
-          <img src={leetcode} className='w-[50px] h-[20px]   m-2 object-cover' alt='not found '></img>
-          <a href='https://leetcode.com/u/sapteamit/'> Leetcode </a>
+          <div className="flex flex-row  justify-center items-center " >
+            <img src={leetcode} className='w-[50px] h-[20px]   m-2 object-cover' alt='not found '></img>
+            <a href='https://leetcode.com/u/sapteamit/'> Leetcode </a>
+          </div>
         </div>
-
       </div>
-      <div className="bg-gray-700  h-screen w-full  flex flex-col gap-3">
+      <div className='  flex flex-col  '>
+        <div className="">
+
+        </div>
+      </div>
+      <div className="bg-gray-700  h-full   flex flex-col gap-3">
 
         <div className="flex relative top-2 flex-row start-1 items-center  gap-3 m-2">
           <svg
@@ -77,8 +83,33 @@ function App() {
           </div>
           <div className="ml-52 shadow-2xl mt-20 shadow-slate-200">
             <div className="w-[80px] h-[30px] bg-black "></div>
-          </div>
+            <div className="flex absolute left-11 top-[425px] ">
+              <div className="border border-gray-900 bg-gray-900 h-[200px] w-[200px] flex flex-col   top-20 left-0">
 
+              </div>
+
+
+            </div>
+          </div>
+          <div className="mt-4 relative w-[500px] h-[400px] justify-center items-center shadow-2xl flex flex-col border border-gray-50 shadow-slate-200 bg-slate-500">
+            <div className="text-[30px] font-bold ">
+              BackEnd
+            </div>
+            <div className='flex flex-row gap-4  '>
+              <div className='border  border-gray-300 flex row w-[130px] h-[40px]'>
+                <img src='' alt='not found'></img>
+                <label className='text-[20px] ml-1' >Java</label>
+              </div>
+              <div className='border border-gray-300 flex row w-[130px] h-[40px]'>
+                <img src='' alt='not found'></img>
+                <label className='text-[20px] ml-1' >Node</label>
+              </div>
+              <div className='border border-gray-300 flex row w-[130px] h-[40px]'>
+                <img src='' alt='not found'></img>
+                <label className='text-[20px] ml-1' >Java</label>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
