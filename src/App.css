@@ -1,0 +1,5 @@
+/* styles.css */
+.custom-shadow {
+    @apply shadow-[rgb(31,38,52)_-20px_-17px_60px,_rgb(31,38,52)_12px_3px_60px];
+  }
+  

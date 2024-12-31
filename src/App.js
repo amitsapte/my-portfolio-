@@ -1,14 +1,30 @@
-import amitImage from '../src/logo192.png'
+import leetcode from '../src/image/leetcode.png'
+import hackrank from '../src/image/hackrank.png'
+import github from '../src/image/github.png'
+import './App.css'
 
 function App() {
   return (
-    <div>
-      <div className="">
+    <div className='bg-gray-700'>
+      <div className="flex  pt-2 mr-4 text-white gap-8 flex-row-reverse">
+        <div className="flex flex-row justify-center items-center " >
+          <img src={github} alt='not found' className=' m-2  w-[35px] h-[30px]  object-cover '></img>
+          <a className='text-[25px]' href='https://github.com/amitsapte'>Github </a>
+        </div>
+        <div className="flex  flex-row  justify-center items-center" >
+          <img src={hackrank} alt='not found' className='w-[30px] h-[20px] m-2  object-cover' ></img>
+          <a href='https://www.hackerrank.com/profile/sapteab2018'>Hackerrank</a>
+        </div>
+
+        <div className="flex flex-row  justify-center items-center " >
+          <img src={leetcode} className='w-[50px] h-[20px]   m-2 object-cover' alt='not found '></img>
+          <a href='https://leetcode.com/u/sapteamit/'> Leetcode </a>
+        </div>
 
       </div>
       <div className="bg-gray-700  h-screen w-full  flex flex-col gap-3">
 
-        <div className="flex relative left-1/3 top-2 flex-row start-1 justify-center items-center  gap-3 m-2">
+        <div className="flex relative top-2 flex-row start-1 items-center  gap-3 m-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="absolute top-0 left-0"
@@ -29,29 +45,37 @@ function App() {
               />
             </circle>
           </svg>
-          <div className=" text-white   flex flex-col p-6 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-3 hover:translate-x-4 hover:translate-y-4">
+          <div className=" text-white ml-60  flex flex-col p-0 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-3 hover:translate-x-4 hover:translate-y-4">
 
             <div className="text-[30px] font-bold">Hey 👋, I am</div>
-             <div className="text-[38px] font-bold">Amit</div>
-             <div className="text-[39px] font-bold">Sapte</div>
-             <div className="text-[30px] font-bold">A Full Stack Dev</div>
-             <div className="text-[20px] text-gray-500 font-bold">Mumbai Maharashtra </div>
-             <button className="bg-blue-600 h-[40px]  shadow-2xl mt-4 shadow-white">Check Resume</button>
-            
-          </div>
-
-
-          <div className="border border-white ">
-              <img className='h-[300px] w-[300px]' src={amitImage} alt="not found" ></img>
+            <div className="text-[38px] font-bold">Amit</div>
+            <div className="text-[39px] font-bold">Sapte</div>
+            <div className="text-[30px] font-bold">A Full Stack Dev</div>
+            <div className="text-[20px] text-gray-500 font-bold">Mumbai Maharashtra </div>
+            <div className='custom-shadow'>
+              <button className="bg-gradient-to-bl mt-8 from-[rgb(132,0,255)] to-[rgb(230,0,255)]  h-[40px] w-full   ">Check Resume</button>
+            </div>
+            {/* <img className='h-[300px] w-[250px] rounded-md' src={amitImage} alt="not found" ></img> */}
           </div>
         </div>
 
-        <div className="flex absolute left-11 top-[425px] ">
-          <div className="border border-gray-900 bg-gray-900 h-[200px] w-[200px] flex flex-col   top-20 left-0">
-            <div className="w-[200px] h-[200px]">hey amit is here</div>
-            <div className="w-[200px] h-[200px]">hey amit is here</div>
+        <div className="flex absolute left-11 top-[425px]  ">
+          <div className="border border-gray-900 bg-gray-900 h-[400px] w-[500px] flex flex-col items-center justify-center  top-20 left-0">
+            <div>
+              <label className='text-gray-300 text-[49px]'>FrontEnd</label>
+            </div>
+            <div className='flex flex-row '>
+              <div className='border border-gray-300  m-3 h-[40px] w-[100px] flex flex-row justify-center items-center'>
+                <img src='https://www.w3.org/html/logo/badge/html5-badge-h-solo.png' className='h-[35px] w-[40px] ' alt='not found'></img>
+                <label className='text-gray-400 font-bold'>HTML5</label>
+              </div>
+              <div className='border border-gray-300  m-3 h-[40px] w-[100px] flex flex-row justify-center items-center'>
+                <img src='https://www.w3.org/html/logo/badge/html5-badge-h-solo.png' className='h-[35px] w-[40px] ' alt='not found'></img>
+                <label className='text-gray-400 font-bold'>HTML5</label>
+              </div>
+            </div>
           </div>
-          <div className="ml-52 shadow-2xl shadow-slate-200">
+          <div className="ml-52 shadow-2xl mt-20 shadow-slate-200">
             <div className="w-[80px] h-[30px] bg-black "></div>
           </div>
 
