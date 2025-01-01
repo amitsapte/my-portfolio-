@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   return (
     <div >
-      <div className='bg-gray-700'>
+      <div className='bg-gray-900'>
         <div className="flex  pt-2 mr-4 text-white gap-8 flex-row-reverse">
           <div className="flex flex-row justify-center items-center " >
             <img src={github} alt='not found' className=' m-2  w-[35px] h-[30px]  object-cover '></img>
@@ -66,9 +66,9 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='bg-green-500 h-auto w-auto  items-center  justify-center flex flex-row  gap-2'>
+      <div className=' h-full w-full bg-gray-900 absolute items-center  justify-center flex flex-row  gap-4'>
         <div className="flex flex-row mt-6   ">
-          <div className="border border-gray-900 bg-gray-900 h-[300px] w-[500px] flex flex-col items-center justify-center ">
+          <div className="border border-gray-500 bg-gray-900 h-[300px] w-[500px] flex flex-col items-center justify-center ">
             <div>
               <label className='text-gray-300 text-[30px]'>Front-End</label>
             </div>
@@ -114,7 +114,7 @@ function App() {
         </div>
 
 
-        <div className="mt-6   w-[500px] h-[300px]  justify-center items-center shadow-2xl flex flex-col border border-gray-50 shadow-slate-200 bg-gray-900">
+        <div className="mt-6   w-[500px] h-[300px]   justify-center items-center shadow-2xl flex flex-col border border-gray-50 shadow-slate-200 bg-gray-900">
           <div className="text-[30px] font-bold ">
             BackEnd
           </div>
