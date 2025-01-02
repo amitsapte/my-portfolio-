@@ -66,7 +66,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className=' h-full w-full bg-gray-900 absolute items-center  justify-center flex flex-row  gap-4'>
+      <div className=' h-full  w-full bg-gray-900 absolute justify-center sm:flex-col md:flex-row  flex flex-row  gap-2'>
         <div className="flex flex-row mt-6   ">
           <div className="border border-gray-500 bg-gray-900 h-[300px] w-[500px] flex flex-col items-center justify-center ">
             <div>
