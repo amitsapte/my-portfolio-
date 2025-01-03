@@ -79,9 +79,9 @@ function App() {
         </div>
         </div>
       </div>
-      <div className='h-full w-full bg-gray-900 pl-10 pt-4 grid-flow-row sm:grid-flow-col p-2 gap-0'>
-      {/* <div className="flex flex-row    "> */}
-          <div className="border border-gray-500 ml-32  bg-gray-900 h-[300px] w-[500px] flex flex-col items-center justify-center ">
+      <div className=' h-full  w-full bg-gray-900 absolute justify-center sm:flex-col md:flex-row  flex flex-row  gap-2'>
+        <div className="flex flex-row mt-6   ">
+          <div className="border border-gray-500 bg-gray-900 h-[300px] w-[500px] flex flex-col items-center justify-center ">
             <div>
               <label className='text-gray-300 text-[30px]'>Front-End</label>
             </div>
@@ -124,7 +124,7 @@ function App() {
                 </div>
               </div>
             </div> */}
-        {/* </div> */}
+        </div>
 
 
         <div className="   w-[500px] h-[300px]   justify-center items-center shadow-2xl flex flex-col border border-gray-50 shadow-slate-200 bg-gray-900">
