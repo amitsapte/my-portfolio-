@@ -10,16 +10,16 @@ function App() {
       <div className='bg-gray-900'>
         <div className="flex  pt-2 mr-4 text-white gap-8 flex-row-reverse">
           <div className="flex flex-row justify-center items-center " >
-            <img src={github} alt='not found' className=' m-2  w-[35px] h-[30px]  object-cover '></img>
+            <img src={github || null} alt='not found' className=' m-2  w-[35px] h-[30px]  object-cover '></img>
             <a className='text-[25px]' href='https://github.com/amitsapte'>Github </a>
           </div>
           <div className="flex  flex-row  justify-center items-center" >
-            <img src={hackrank} alt='not found' className='w-[30px] h-[20px] m-2  object-cover' ></img>
+            <img src={hackrank || null} alt='not found' className='w-[30px] h-[20px] m-2  object-cover' ></img>
             <a href='https://www.hackerrank.com/profile/sapteab2018'>Hackerrank</a>
           </div>
 
           <div className="flex flex-row  justify-center items-center " >
-            <img src={leetcode} className='w-[50px] h-[20px]   m-2 object-cover' alt='not found '></img>
+            <img src={leetcode  || null} className='w-[50px] h-[20px]   m-2 object-cover' alt='not found '></img>
             <a href='https://leetcode.com/u/sapteamit/'> Leetcode </a>
           </div>
         </div>
@@ -29,9 +29,9 @@ function App() {
 
         </div>
       </div>
-      <div className="bg-gray-900  h-full   flex flex-col gap-3">
+      <div className="bg-gray-900  h-full    flex flex-col gap-3">
 
-        <div className="flex relative top-2 flex-row start-1 items-center  gap-3 m-2">
+        <div className="flex relative top-2 flex-row start-1 items-center justify-center  gap-3 m-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="absolute top-0 left-0"
@@ -52,38 +52,51 @@ function App() {
               />
             </circle>
           </svg>
-          <div className=" text-white ml-60  flex flex-col p-0 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-3 hover:translate-x-4 hover:translate-y-4">
-
+          <div className='flex flex-row justify-center items-center gap-3  '>
+          <div className=" text-white    flex flex-col p-0 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-3 hover:translate-x-4 hover:translate-y-4">
             <div className="text-[30px] font-bold">Hey 👋, I am</div>
             <div className="text-[38px] font-bold">Amit</div>
             <div className="text-[39px] font-bold">Sapte</div>
             <div className="text-[30px] font-bold">A Full Stack Dev</div>
             <div className="text-[20px] text-gray-500 font-bold">Mumbai Maharashtra </div>
-            <div className='mb-8'>
+            <div className='h-[120px]'>
+              <button className="custom-shadow bg-gradient-to-bl mt-4 from-[rgb(132,0,255)] to-[rgb(230,0,255)]  h-[40px] w-full   ">Check Resume</button>
+            </div>
+            {/* <img className='h-[300px] w-[250px] rounded-md' src={amitImage} alt="not found" ></img> */}
+          </div> 
+          <div className=" text-white    flex flex-col p-0 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-3 hover:translate-x-4 hover:translate-y-4">
+            <div className="text-[30px] font-bold">Hey 👋, I am</div>
+            <div className="text-[38px] font-bold">Amit</div>
+            <div className="text-[39px] font-bold">Sapte</div>
+            <div className="text-[30px] font-bold">A Full Stack Dev</div>
+            <div className="text-[20px] text-gray-500 font-bold">Mumbai Maharashtra </div>
+            <div className='h-[120px]'>
               <button className="custom-shadow bg-gradient-to-bl mt-4 from-[rgb(132,0,255)] to-[rgb(230,0,255)]  h-[40px] w-full   ">Check Resume</button>
             </div>
             {/* <img className='h-[300px] w-[250px] rounded-md' src={amitImage} alt="not found" ></img> */}
           </div>
+          
+        </div>
         </div>
       </div>
-      <div className=' h-full w-full bg-gray-900 absolute items-center  justify-center flex flex-row  gap-4'>
-        <div className="flex flex-row mt-6   ">
-          <div className="border border-gray-500 bg-gray-900 h-[300px] w-[500px] flex flex-col items-center justify-center ">
+      <div className='h-full w-full bg-gray-900 pl-10 pt-4 grid-flow-row sm:grid-flow-col p-2 gap-0'>
+      {/* <div className="flex flex-row    "> */}
+          <div className="border border-gray-500 ml-32  bg-gray-900 h-[300px] w-[500px] flex flex-col items-center justify-center ">
             <div>
               <label className='text-gray-300 text-[30px]'>Front-End</label>
             </div>
             <div className='flex flex-row justify-center items-center'>
               <div className='border border-gray-300  m-3 h-[50px] w-[130px] rounded-md flex flex-row justify-center gap-1 items-center'>
-                <img src={reactImage} className='h-[25px] w-[30px] ' alt='not found'></img>
+                <img src={reactImage  || null} className='h-[25px] w-[30px] ' alt='not found'></img>
                 <label className='text-gray-400 font-bold'>React Js</label>
               </div>
               <div className='border border-gray-300  m-3 h-[50px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
-                <img src= 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg' className='h-[30px] w-[35px] ' alt='not found'></img>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg' className='h-[30px] w-[35px] ' alt='not found'></img>
                 <label className='text-gray-400 font-bold'>Tailwind</label>
               </div>
             </div>
             <div className='flex flex-row justify-center items-center'>
-            <div className='border border-gray-300  m-3 h-[50px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
+              <div className='border border-gray-300  m-3 h-[50px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png' className='h-[30px] w-[35px] ' alt='not found'></img>
                 <label className='text-gray-400 font-bold'>JavaScript</label>
               </div>
@@ -97,7 +110,7 @@ function App() {
               </div>
             </div>
             <div>
-            <div className='border border-gray-300  m-3 h-[60px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
+              <div className='border border-gray-300  m-3 h-[60px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
                 <img src='https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png' className='h-[40px] w-[45px] ' alt='not found'></img>
                 <label className='text-gray-400 font-bold'>Bootstrap</label>
               </div>
@@ -111,10 +124,10 @@ function App() {
                 </div>
               </div>
             </div> */}
-        </div>
+        {/* </div> */}
 
 
-        <div className="mt-6   w-[500px] h-[300px]   justify-center items-center shadow-2xl flex flex-col border border-gray-50 shadow-slate-200 bg-gray-900">
+        <div className="   w-[500px] h-[300px]   justify-center items-center shadow-2xl flex flex-col border border-gray-50 shadow-slate-200 bg-gray-900">
           <div className="text-[30px] font-bold ">
             BackEnd
           </div>
@@ -128,7 +141,7 @@ function App() {
               <label className='text-[20px] text-white ml-1' >Node</label>
             </div>
             <div className='border border-gray-300 flex row w-[130px] h-[40px]'>
-              <img src='' alt='not found'></img>
+              {/* <img src='  null' alt='not found'></img> */}
               <label className='text-[20px] ml-1' >Java</label>
             </div>
           </div>
