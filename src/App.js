@@ -5,10 +5,38 @@ import reactImage from './image/logo512.png'
 import './App.css'
 
 function App() {
+
+  const toggleMenu = () => {
+    const menu = document.getElementById("togalbuttonClick");
+    menu.classList.toggle('hidden');
+  }
   return (
     <div >
       <div className='bg-gray-900'>
-        <div className="flex  pt-2 mr-4 text-white gap-8 flex-row-reverse">
+        <div className='flex  flex-row-reverse p-1'>
+          <button
+            className='lg:hidden sm:hidden md:hidden p-2 text-gray-50 hover:text-gray-50 focus:outline-none'
+            onClick={toggleMenu}
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='white'
+              viewBox='0 0 10 10'
+              stroke='currentColor'
+              className='w-10 h-10'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
+                d='M1 1h8M1 5h8M1 9h8'
+
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div className="  pt-2 mr-4 text-white gap-8 "  id="togalbuttonClick" >
           <div className="flex flex-row justify-center items-center " >
             <img src={github || null} alt='not found' className=' m-2  w-[35px] h-[30px]  object-cover '></img>
             <a className='text-[25px]' href='https://github.com/amitsapte'>Github </a>
@@ -19,13 +47,14 @@ function App() {
           </div>
 
           <div className="flex flex-row  justify-center items-center " >
-            <img src={leetcode  || null} className='w-[50px] h-[20px]   m-2 object-cover' alt='not found '></img>
+            <img src={leetcode || null} className='w-[50px] h-[20px]   m-2 object-cover' alt='not found '></img>
             <a href='https://leetcode.com/u/sapteamit/'> Leetcode </a>
           </div>
         </div>
+
       </div>
       <div className='  flex flex-col  '>
-        <div className="">
+        <div className="bg-red-700">
 
         </div>
       </div>
@@ -52,42 +81,42 @@ function App() {
               />
             </circle>
           </svg>
-          <div className='flex flex-row justify-center items-center gap-3  '>
-          <div className=" text-white    flex flex-col p-0 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-3 hover:translate-x-4 hover:translate-y-4">
-            <div className="text-[30px] font-bold">Hey 👋, I am</div>
-            <div className="text-[38px] font-bold">Amit</div>
-            <div className="text-[39px] font-bold">Sapte</div>
-            <div className="text-[30px] font-bold">A Full Stack Dev</div>
-            <div className="text-[20px] text-gray-500 font-bold">Mumbai Maharashtra </div>
-            <div className='h-[120px]'>
-              <button className="custom-shadow bg-gradient-to-bl mt-4 from-[rgb(132,0,255)] to-[rgb(230,0,255)]  h-[40px] w-full   ">Check Resume</button>
+          <div className='flex flex-col justify-center items-center gap-6 sm:flex-col md:flex-col  lg:flex-row  '>
+            <div className=" text-white    flex flex-col p-0 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-3 hover:translate-x-4 hover:translate-y-4">
+              <div className="text-[30px] font-bold">Hey 👋, I am</div>
+              <div className="text-[38px] font-bold">Amit</div>
+              <div className="text-[39px] font-bold">Sapte</div>
+              <div className="text-[30px] font-bold">A Full Stack Dev</div>
+              <div className="text-[20px] text-gray-500 font-bold">Mumbai Maharashtra </div>
+              <div className='h-[120px]'>
+                <button className="custom-shadow bg-gradient-to-bl mt-4 from-[rgb(132,0,255)] to-[rgb(230,0,255)]  h-[40px] w-full   ">Check Resume</button>
+              </div>
+              {/* <img className='h-[300px] w-[250px] rounded-md' src={amitImage} alt="not found" ></img> */}
             </div>
-            {/* <img className='h-[300px] w-[250px] rounded-md' src={amitImage} alt="not found" ></img> */}
-          </div> 
-          <div className=" text-white    flex flex-col p-0 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-3 hover:translate-x-4 hover:translate-y-4">
-            <div className="text-[30px] font-bold">Hey 👋, I am</div>
-            <div className="text-[38px] font-bold">Amit</div>
-            <div className="text-[39px] font-bold">Sapte</div>
-            <div className="text-[30px] font-bold">A Full Stack Dev</div>
-            <div className="text-[20px] text-gray-500 font-bold">Mumbai Maharashtra </div>
-            <div className='h-[120px]'>
-              <button className="custom-shadow bg-gradient-to-bl mt-4 from-[rgb(132,0,255)] to-[rgb(230,0,255)]  h-[40px] w-full   ">Check Resume</button>
+            <div className=" text-white    flex flex-col p-0 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-3 hover:translate-x-4 hover:translate-y-4">
+              <div className="text-[30px] font-bold">Hey 👋, I am</div>
+              <div className="text-[38px] font-bold">Amit</div>
+              <div className="text-[39px] font-bold">Sapte</div>
+              <div className="text-[30px] font-bold">A Full Stack Dev</div>
+              <div className="text-[20px] text-gray-500 font-bold">Mumbai Maharashtra </div>
+              <div className='h-[120px]'>
+                <button className="custom-shadow bg-gradient-to-bl mt-4 from-[rgb(132,0,255)] to-[rgb(230,0,255)]  h-[40px] w-full   ">Check Resume</button>
+              </div>
+              {/* <img className='h-[300px] w-[250px] rounded-md' src={amitImage} alt="not found" ></img> */}
             </div>
-            {/* <img className='h-[300px] w-[250px] rounded-md' src={amitImage} alt="not found" ></img> */}
+
           </div>
-          
-        </div>
         </div>
       </div>
-      <div className=' h-full  w-full bg-gray-900 absolute justify-center sm:flex-col md:flex-row  flex flex-row  gap-2'>
-        <div className="flex flex-row mt-6   ">
-          <div className="border border-gray-500 bg-gray-900 h-[300px] w-[500px] flex flex-col items-center justify-center ">
+      <div className=' h-auto p-4  w-full bg-gray-900  flex flex-col  justify-center sm:flex-col md:flex-col  lg:flex-row gap-2'>
+        <div className="flex flex-row mt-0  justify-center items-center ">
+          <div className="border border-gray-500 bg-gray-900 h-[300px] w-auto flex flex-col items-center justify-center ">
             <div>
               <label className='text-gray-300 text-[30px]'>Front-End</label>
             </div>
-            <div className='flex flex-row justify-center items-center'>
+            <div className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-center  '>
               <div className='border border-gray-300  m-3 h-[50px] w-[130px] rounded-md flex flex-row justify-center gap-1 items-center'>
-                <img src={reactImage  || null} className='h-[25px] w-[30px] ' alt='not found'></img>
+                <img src={reactImage || null} className='h-[25px] w-[30px] ' alt='not found'></img>
                 <label className='text-gray-400 font-bold'>React Js</label>
               </div>
               <div className='border border-gray-300  m-3 h-[50px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
@@ -95,10 +124,10 @@ function App() {
                 <label className='text-gray-400 font-bold'>Tailwind</label>
               </div>
             </div>
-            <div className='flex flex-row justify-center items-center'>
-              <div className='border border-gray-300  m-3 h-[50px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png' className='h-[30px] w-[35px] ' alt='not found'></img>
-                <label className='text-gray-400 font-bold'>JavaScript</label>
+            <div className='flex flex-col sm:flex-row  md:flex-row lg:flex-row justify-center items-center'>
+              <div className='border border-gray-300  m-3 h-[30px] w-[95px] sm:h-[50px] sm:w-[130px] flex flex-row justify-center rounded-md  items-center'>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png' className='h-[18px] w-[25px] sm:h-[30px] sm:w-[35px] ' alt='not found'></img>
+                <label className='text-gray-400 font-bold text-[11px] ml-[3px]'>JavaScript</label>
               </div>
               <div className='border border-gray-300  m-3 h-[50px] w-[100px] rounded-md flex flex-row justify-center gap-1 items-center'>
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png' className='h-[45px] w-[40px] ' alt='not found'></img>
@@ -126,29 +155,29 @@ function App() {
             </div> */}
         </div>
 
+        <div className="flex flex-row mt-0  justify-center items-center ">
+          <div className="   p-3 w-auto  h-[300px]   justify-center items-center shadow-2xl flex flex-col border border-gray-50 shadow-slate-200 bg-gray-900">
+            <div className="text-[30px] font-bold text-white ">
+              BackEnd
+            </div>
+            <div className='flex flex-row gap-2  '>
+              <div className='border  border-gray-300 flex row w-[130px] h-[40px] justify-center items-centers'>
+                <img src='https://icon-library.com/images/java-icon-png/java-icon-png-15.jpg' className='w-[60px] h-[30px]' alt='not found'></img>
+                <label className='text-[20px] ml-1' >Java</label>
+              </div>
+              <div className='border border-gray-300 flex row w-[130px] justify-center items-center h-[40px]'>
+                <img src='https://nodejs.org/static/logos/nodejsLight.svg' className='w-[60px] h-[40px]' alt='not found'></img>
+                <label className='text-[20px] text-white ml-1' >Node</label>
+              </div>
+              <div className='border border-gray-300 flex row w-[130px] h-[40px]'>
+                {/* <img src='  null' alt='not found'></img> */}
+                <label className='text-[20px] ml-1' >Java</label>
+              </div>
+            </div>
+          </div>
 
-        <div className="   w-[500px] h-[300px]   justify-center items-center shadow-2xl flex flex-col border border-gray-50 shadow-slate-200 bg-gray-900">
-          <div className="text-[30px] font-bold ">
-            BackEnd
-          </div>
-          <div className='flex flex-row gap-2  '>
-            <div className='border  border-gray-300 flex row w-[130px] h-[40px] justify-center items-centers'>
-              <img src='https://icon-library.com/images/java-icon-png/java-icon-png-15.jpg' className='w-[60px] h-[30px]' alt='not found'></img>
-              <label className='text-[20px] ml-1' >Java</label>
-            </div>
-            <div className='border border-gray-300 flex row w-[130px] justify-center items-center h-[40px]'>
-              <img src='https://nodejs.org/static/logos/nodejsLight.svg' className='w-[60px] h-[40px]' alt='not found'></img>
-              <label className='text-[20px] text-white ml-1' >Node</label>
-            </div>
-            <div className='border border-gray-300 flex row w-[130px] h-[40px]'>
-              {/* <img src='  null' alt='not found'></img> */}
-              <label className='text-[20px] ml-1' >Java</label>
-            </div>
-          </div>
         </div>
-
       </div>
-
     </div>
   );
 }

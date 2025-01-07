@@ -3,3 +3,14 @@
     @apply shadow-[rgb(113,117,127)_-20px_-8px_60px,_rgb(113,117,127)_20px_8px_60px];
   }
   
+  #togalbuttonClick {
+    display: flex ;
+    flex-direction: row-reverse; /* Hidden by default */
+  }
+  
+  /* When the 'visible' class is added, the menu becomes visible */
+  #togalbuttonClick.visiable {
+    display: flex; /* Or whatever display type fits your design */
+  }
+
+ 
