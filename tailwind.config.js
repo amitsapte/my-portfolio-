@@ -1,9 +1,14 @@
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Adjust if you have other file types
-  ],
-  theme: {
-    extend: {},
+// Tailwind configuration
+export const content = ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"];
+
+export const theme = {
+  extend: {
+    screens: {
+      'sm': '300px',
+    },
   },
-  plugins: [],
-}
+};
+
+export const plugins = [];
+
+

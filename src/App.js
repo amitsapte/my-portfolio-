@@ -2,41 +2,75 @@ import leetcode from '../src/image/leetcode.png'
 import hackrank from '../src/image/hackrank.png'
 import github from '../src/image/github.png'
 import reactImage from './image/logo512.png'
+import expressImage from './image/express.img.png'
 import './App.css'
+import { useEffect } from 'react'
 
 function App() {
 
-  const toggleMenu = () => {
-    const menu = document.getElementById("togalbuttonClick");
-    menu.classList.toggle('hidden');
-  }
-  return (
-    <div >
-      <div className='bg-gray-900'>
-        <div className='flex  flex-row-reverse p-1'>
-          <button
-            className='lg:hidden sm:hidden md:hidden p-2 text-gray-50 hover:text-gray-50 focus:outline-none'
-            onClick={toggleMenu}
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='white'
-              viewBox='0 0 10 10'
-              stroke='currentColor'
-              className='w-10 h-10'
+  
+    useEffect(() => {
+      const menu = document.getElementById("togalbuttonClick");
+  
+      // Check if screen width is 900px or more
+      if (window.innerWidth >= 900) {
+        menu.classList.add('visiable');
+        menu.classList.remove('nonvisiable');
+      } else {
+        menu.classList.add('nonvisiable');
+        menu.classList.remove('visiable');
+      }
+  
+      // Optionally, add a resize event listener to adjust when resizing the window
+      const handleResize = () => {
+        if (window.innerWidth >= 900) {
+          menu.classList.add('visiable');
+          menu.classList.remove('nonvisiable');
+        } else {
+          menu.classList.add('nonvisiable');
+          menu.classList.remove('visiable');
+        }
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      // Cleanup event listener on unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []); // Empty dependency array to run effect only on mount
+  
+    const toggleMenu = () => {
+      const menu = document.getElementById("togalbuttonClick");
+      menu.classList.toggle('visiable');
+    };
+  
+    return (
+      <div>
+        <div className='bg-gray-900'>
+          <div className='flex flex-row-reverse p-1'>
+            <button
+              className='block md:hidden p-2 text-gray-50 hover:text-gray-50 focus:outline-none'
+              onClick={toggleMenu}
             >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                d='M1 1h8M1 5h8M1 9h8'
-
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div className="  pt-2 mr-4 text-white gap-8 " id="togalbuttonClick" >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='white'
+                viewBox='0 0 10 10'
+                stroke='currentColor'
+                className='w-10 h-10'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='M1 1h8M1 5h8M1 9h8'
+                />
+              </svg>
+            </button>
+          </div>
+          
+        <div className="    pt-2 mr-4 text-white gap-8 " id="togalbuttonClick" >
           <div className="flex flex-row justify-center items-center " >
             <img src={github || null} alt='not found' className=' m-2  w-[35px] h-[30px]  object-cover '></img>
             <a className='text-[25px]' href='https://github.com/amitsapte'>Github </a>
@@ -109,40 +143,40 @@ function App() {
           </div>
         </div>
       </div>
-      <div className=' h-auto p-4  w-full bg-gray-900  flex flex-col  justify-center sm:flex-col md:flex-col  lg:flex-row md:gap-20 gap-4'>
+      <div className=' h-auto p-4  w-full bg-gray-900  flex flex-col  justify-center sm:flex-col md:flex-col  lg:flex-row md:gap-20 gap-2 '>
         <div className="flex flex-row mt-0  justify-center items-center ">
-          <div className="border border-gray-500 bg-gray-900 h-[300px] w-auto flex flex-col items-center justify-center ">
+          <div className="border border-gray-500 gap-0 bg-gray-900 h-[300px] w-auto flex flex-col items-center justify-center ">
             <div>
               <label className='text-gray-300 text-[30px]'>Front-End</label>
             </div>
-            <div className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-center  '>
-              <div className='border border-gray-300  m-3 h-[50px] w-[130px] rounded-md flex flex-row justify-center gap-1 items-center'>
+            <div className='flex flex-col sm:gap-2 sm:flex-row  justify-center items-center '>
+              <div className='border border-gray-300 w-[90px] h-[40px] md:w-[130px] md:h-[50px] rounded-md flex flex-row justify-center gap-1 items-center'>
                 <img src={reactImage || null} className='h-[25px] w-[30px] ' alt='not found'></img>
-                <label className='text-gray-400 font-bold'>React Js</label>
+                <label className='text-gray-400 md:text-[18px] text-[12px] font-bold'>React Js</label>
               </div>
-              <div className='border border-gray-300  m-3 h-[50px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg' className='h-[30px] w-[35px] ' alt='not found'></img>
-                <label className='text-gray-400 font-bold'>Tailwind</label>
-              </div>
-            </div>
-            <div className='flex flex-col sm:flex-row  md:flex-row lg:flex-row justify-center items-center'>
-              <div className='border border-gray-300  m-3 h-[30px] w-[95px] sm:h-[50px] sm:w-[130px] flex flex-row justify-center rounded-md  items-center'>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png' className='h-[18px] w-[25px] sm:h-[30px] sm:w-[35px] ' alt='not found'></img>
-                <label className='text-gray-400 font-bold text-[11px] ml-[3px]'>JavaScript</label>
-              </div>
-              <div className='border border-gray-300  m-3 h-[50px] w-[100px] rounded-md flex flex-row justify-center gap-1 items-center'>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png' className='h-[45px] w-[40px] ' alt='not found'></img>
-                <label className='text-gray-400 font-bold'>Css</label>
-              </div>
-              <div className='border border-gray-300  m-3 h-[50px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
-                <img src='https://www.w3.org/html/logo/badge/html5-badge-h-solo.png' className='h-[40px] w-[45px] ' alt='not found'></img>
-                <label className='text-gray-400 font-bold'>HTML5</label>
+              <div className='border border-gray-300  w-[90px] h-[40px] md:w-[130px] md:h-[50px] flex flex-row justify-center rounded-md gap-1 items-center'>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg' className= 'md:h-[40px] md:w-[45px] h-[30px] w-[30px] ' alt='not found'></img>
+                <label className='text-gray-400 font-bold md:text-[18px] text-[12px]'>Tailwind</label>
               </div>
             </div>
-            <div>
-              <div className='border border-gray-300  m-3 h-[60px] w-[130px] flex flex-row justify-center rounded-md gap-1 items-center'>
-                <img src='https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png' className='h-[40px] w-[45px] ' alt='not found'></img>
-                <label className='text-gray-400 font-bold'>Bootstrap</label>
+            <div className='flex flex-col  gap-1  md:gap-2  sm:flex-row  justify-center items-center'>
+              <div className='border border-gray-300   w-[90px] h-[40px] md:w-[130px] md:h-[50px] flex flex-row justify-center rounded-md gap-1  items-center'>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png' className='md:h-[30px] md:w-[30px] h-[20px] w-[20px] ' alt='not found'></img>
+                <label className='text-gray-400 font-bold md:text-[18px] text-[12px]'>JavaScript</label>
+              </div>
+              <div className='border border-gray-300   w-[90px] h-[40px] md:w-[130px] md:h-[50px] rounded-md flex flex-row justify-center items-center gap-1'>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png' className='md:h-[40px] md:w-[45px] h-[30px] w-[30px] ' alt='not found'></img>
+                <label className='text-gray-400 font-bold md:text-[18px] text-[12px]'>Css</label>
+              </div>
+              <div className='border border-gray-300   w-[90px] h-[40px] md:w-[130px] md:h-[50px] flex flex-row justify-center rounded-md md:gap-1 items-center'>
+                <img src='https://www.w3.org/html/logo/badge/html5-badge-h-solo.png' className='md:h-[40px] md:w-[45px] h-[30px] w-[30px] ' alt='not found'></img>
+                <label className='text-gray-400 font-bold md:text-[18px] text-[12px]'>HTML5</label>
+              </div>
+              </div>
+              <div>
+            <div className='border border-gray-300   w-[90px] h-[40px] md:w-[130px] md:h-[50px] flex flex-row justify-center rounded-md md:gap-1 items-center'>
+                <img src='https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png' className='md:h-[40px] md:w-[45px] h-[30px] w-[30px] ' alt='not found'></img>
+                <label className='text-gray-400 font-bold md:text-[18px] text-[12px]'>Bootstrap</label>
               </div>
             </div>
 
@@ -157,52 +191,53 @@ function App() {
         </div>
 
         <div className="flex flex-row mt-0  justify-center items-center ">
-          <div className="   p-3 w-auto  h-[300px]   justify-center items-center shadow-2xl  gap-6 flex flex-col border border-gray-50 shadow-slate-200 bg-gray-900">
+          <div className="   p-3 w-auto  h-[300px]   justify-center items-center shadow-2xl  md:gap-6 gap-1 flex flex-col border border-gray-50 shadow-slate-200 bg-gray-900">
             <div className="text-[30px] font-bold text-white ">
               BackEnd
             </div>
-            <div className='flex flex-col  gap-6 '>
-              <div className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-center gap-8  '>
+            <div className='flex flex-col md:gap-6 gap-1'>
+              <div className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-center md:gap-8 gap-1 '>
+                <div className='border border-gray-300 flex rowjustify-center items-center w-[90px] h-[30px] md:w-[130px]  md:h-[40px]'>
+                  <img src='https://nodejs.org/static/logos/nodejsLight.svg' className='md:w-[60px] md:h-[40px] w-[40px] h-[30px]' alt='not found'></img>
+                  <label className=' text-white ml-1 text-[12px] md:text-[20px]' >Node</label>
+                </div>
+                <div className='border border-gray-300 flex row  w-[90px] h-[30px] md:w-[130px]  md:h-[40px] justify-center items-center'>
+                  <img src={expressImage || null} className=' md:w-[30px] md:h-[20px] w-[30px] h-[20px]' alt='not found' />
+                  <label className='text-[12px] md:text-[20px] ml-1 text-white'>Express Js</label>
+                </div>
 
-                <div className='border  border-gray-300 flex row w-[130px] h-[40px] justify-center items-centers'>
-                  {/* <img src=''className='w-[60px] h-[30px]' alt='not found'> </img> */}
-                  <label className='text-[20px] ml-1  text-white' >Express Js</label>
-                </div>
-                <div className='border border-gray-300 flex row w-[130px] justify-center items-center h-[40px]'>
-                  <img src='https://nodejs.org/static/logos/nodejsLight.svg' className='w-[60px] h-[40px]' alt='not found'></img>
-                  <label className='text-[20px] text-white ml-1' >Node</label>
-                </div>
+
               </div>
-              <div className='flex flex-col sm:flex-row  md:flex-row lg:flex-row justify-center items-center  gap-2 '>
+              <div className='flex flex-col sm:flex-row  md:flex-row lg:flex-row justify-center gap-1 items-center md:gap-2 '>
 
-                <div className='border border-gray-300 flex row w-[130px] h-[40px]'>
-                  <img src=' https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg' alt='not found'></img>
-                  <label className='text-[18px] ml-1  text-white' >MongoDB</label>
-
-                </div>
-
-                <div className='border border-gray-300 flex row w-[130px] h-[40px]'>
-                  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg' alt='not found'></img>
-                  <label className='text-[20px] ml-1  text-white' >MySql</label>
+                <div className='border border-gray-300 flex justify-center items-center rowmd:w-[130px] md:h-[40px] w-[90px] h-[30px]'>
+                  <img src=' https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg' className='md:w-[30px] md:h-[20px] w-[20px] h-[30px] ' alt='not found'></img>
+                  <label className='text-[10px] md:text-[15px] ml-1  text-white' >MongoDB</label>
 
                 </div>
-                <div className='border border-gray-300 flex row w-[130px] h-[40px]'>
-                  <img src=' https://brijesh.xyz/postman.png' alt='not found'></img>
-                  <label className='text-[22px] ml-1 text-white' >Postman</label>
+
+                <div className='border border-gray-300 flex justify-center items-center row md:w-[130px] md:h-[40px] w-[90px] h-[30px]'>
+                  <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg'  className='md:w-[30px] md:h-[20px] w-[20px] h-[30px]'  alt='not found'></img>
+                  <label className='text-[12px] md:text-[20px] ml-1  text-white' >MySql</label>
+
+                </div>
+                <div className='border border-gray-300 flex justify-center items-center row md:w-[130px] md:h-[40px] w-[90px] h-[30px]'>
+                  <img src=' https://brijesh.xyz/postman.png'  className='md:w-[30px] md:h-[30px] w-[20px] h-[20px]' alt='not found'></img>
+                  <label className='text-[12px] md:text-[22px] ml-1 text-white' >Postman</label>
 
                 </div>
               </div>
               <div className=' flex justify-center items-center'>
-                <div className='border border-gray-300 flex  row w-[130px] h-[40px]'>
-                  <img src=' https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png' alt='not found' className='w-[60px] h-[40px] p-2'></img>
-                  <label className='text-[22px] ml-2 text-white '>Git</label>
+                <div className='border border-gray-300 flex  row md:w-[130px] md:h-[40px] w-[90px] h-[30px]'>
+                  <img src=' https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png' alt='not found' className=' md:w-[60px] md:h-[40px] w-[40px] h-[30px] p-2'></img>
+                  <label className='text-[12px] md:text-[22px] ml-2 text-white '>Git</label>
                 </div>
               </div>
             </div>
           </div>
 
         </div>
-      </div>
+      </div> 
     </div>
   );
 }
