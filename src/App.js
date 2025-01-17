@@ -145,7 +145,7 @@ function App() {
       </div>
       <div className=' h-auto p-2  w-full bg-gray-900  flex flex-col  justify-center sm:flex-col md:flex-col  lg:flex-row md:gap-20 gap-2 '>
         <div className="flex flex-row  justify-center items-center ">
-          <div className="border border-gray-500 gap-0 p-3 bg-gray-900 h-[300px] w-auto flex flex-col items-center justify-center ">
+          <div className="border border-gray-500 md:gap-4 p-3 bg-gray-900 h-[300px] w-auto flex flex-col items-center justify-center ">
             <div>
               <label className='text-gray-300 text-[30px]'>Front-End</label>
             </div>

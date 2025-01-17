@@ -5,6 +5,7 @@ export const theme = {
   extend: {
     screens: {
       'sm': '300px',
+      
     },
   },
 };
